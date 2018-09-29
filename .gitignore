@@ -3,3 +3,6 @@
 Homestead.yaml
 Homestead.json
 .env
+
+# User-specific stuff
+.idea/**/workspace.xml
