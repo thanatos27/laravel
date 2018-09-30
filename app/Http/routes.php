@@ -11,9 +11,39 @@
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//
+//Route::get('/about', function () {
+//    return 'Hi about page';
+//});
+//
+//Route::get('/contact', function () {
+//    return 'Hi I am contact';
+//});
+//
+//Route::get('/post/{id}/{name}', function ($id, $name) {
+//    return "This is post number ". $id. " ". $name;
+//});
+//
+//Route::get('admin/posts/example', array('as'=>'admin.home' ,function () {
+//    $url = route('admin.home');
+//
+//    return "this url is ". $url;
+//}));
+
+//Route::get('/post', 'PostsController@index');
+
 Route::get('/', function () {
-    return view('welcome');
+    return 'hello';
 });
+
+Route::resource('posts', 'PostsController');
+
+Route::get('/contact', 'PostsController@contact');
+
+Route::get('post/{id}/{name}/{password}', 'PostsController@show_post');
 
 /*
 |--------------------------------------------------------------------------
